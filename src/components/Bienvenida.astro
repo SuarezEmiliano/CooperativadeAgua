@@ -1,0 +1,106 @@
+
+<div
+  class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat bg-center p-12 text-center w-full h-screen"
+  style="background-image: url('https://scratch-house.com/wp-content/uploads/2021/10/Imagen-destacada.jpg');"
+>
+  <div
+    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+    style="background-color: rgba(0, 0, 0, 0.6)"
+  >
+    <div class="flex h-full items-center justify-center">
+      <div class="text-white content">
+        <h2 class=" mb-4 text-8xl font-semibold animacion one">
+          Cooperativa de Agua de Sierras Chicas
+        </h2>
+        <h4 class="px-10 mb-6 text-xl font-semibold text-customHoverColor">
+          Unidos por un suministro sostenible de agua para nuestra comunidad.
+        </h4>
+        <a href="#contacto" class="btn light"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .animacion {
+    color: transparent;
+    background-position: 0 0;
+    animation: animated-text 20s linear infinite;
+    font-size: 6rem;
+  }
+
+  .one {
+    -webkit-text-stroke: 1px #fff;
+    background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ba4edde6-822d-437a-88c2-f54392d7a56f);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  @keyframes animated-text {
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  .btn {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    background: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+  }
+
+  .btn:hover {
+    transform: translateY(-5px);
+  }
+
+  .light::before {
+    content: "";
+    position: absolute;
+    background-image: conic-gradient(
+      rgba(192, 114, 11, 0.815) 20deg,
+      transparent 150deg
+    );
+    width: 400%;
+    height: 400%;
+    border-radius: 5px;
+    animation: rotate 3s linear infinite;
+  }
+
+  .light::after {
+    content: "Contáctanos";
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>

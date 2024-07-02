@@ -1,0 +1,73 @@
+---
+import GitHub from "../assets/Github.astro";
+import NextJS from "../assets/Github.astro";
+import Tailwind from "../assets/Github.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#d76f00] text-white",
+    icon: Tailwind,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#006fff] text-white",
+    icon: Tailwind,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Actualización de la tarifa",
+    description:
+      "La cooperativa informa que se ha decidido realizar un ajuste en las tarifas",
+    link: "",
+    image: "./canilla.png",
+    tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16 px-10">
+  {
+    PROJECTS.map(({ link, image, title, description, tags }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <a href={link}>   
+            <img
+              alt="Foto de un proyecto de ejemplo"
+              class="object-cover transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <a href={link}>          
+          <h3 class="text-2xl font-bold text-[#3271b4] dark:text-gray-100">
+            {title}
+          </h3>
+          </a>
+          <div class="flex flex-wrap mt-2">
+
+            <div class="mt-2 text-gray-500 dark:text-gray-400">
+              {description}
+            </div>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../assets/Code.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import PagesCards from "../components/PagesCards.astro";
+import Bienvenida from "../components/Bienvenida.astro"
+import Contacto from "../components/Contacto.astro";
+---
+
+<Layout
+  title="Cooperativa de Agua"
+  description="Desarrolladores web con más de 4 años de experiencia. Especializado en crear aplicaciones útiles para las personas."
+>
+  <main>
+  <Bienvenida/>
+  <div class="p-5" id="tipospaginas">
+    <SectionContainer>
+      <h2 
+      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
+      Tipos de tarifas
+    </h2>
+    <PagesCards />
+  </SectionContainer>
+</div>
+
+    <div class="p-5" id="proyectos">
+    <SectionContainer>
+      <h2
+      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor">
+      Noticias
+    </h2>
+      <Projects />
+    </SectionContainer>
+    </div>
+
+    <div class="p-5" id="sobre-nosotros">
+    <SectionContainer>
+      <h2 
+      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
+      Sobre nosotros
+    </h2>
+      <About />
+    </SectionContainer>
+    </div>
+
+    <div class="p-5" id="contacto">
+    <SectionContainer>
+      <h2 
+      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
+      Contacto
+    </h2>
+      <Contacto />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>
+
+<style>
+  div[id] {
+    scroll-margin-top: 61px;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  #tipospaginas,
+  #proyectos,
+  #sobre-nosotros,
+  #contacto {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+  }
+</style>
