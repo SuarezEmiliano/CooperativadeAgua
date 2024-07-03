@@ -31,7 +31,39 @@ const PROJECTS = [
     description:
       "La cooperativa informa que se ha decidido realizar un ajuste en las tarifas",
     link: "",
-    image: "./canilla.png",
+    image: "https://melodijoperez.com.ar/download/multimedia.normal.b8ba7279a54acece.676f746572612d37363878353133202831295f6e6f726d616c2e6a7067.jpg",
+    tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Inauguración de un nuevo pozo de agua",
+    description:
+      "Se abrió un nuevo pozo de agua que mejorará la capacidad de suministro en Colonia Caroya, beneficiando a los residentes locales",
+    link: "",
+    image: "https://servipresion.com/wp-content/uploads/2019/01/Sistema-de-tratamiento-de-agua-de-pozo.jpg",
+    tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Historia de éxito en Agua de Oro",
+    description:
+      "Caso de estudio sobre cómo la cooperativa ha mejorado el acceso al agua potable en Agua de Oro mediante la instalación de nuevos puntos de distribución.",
+    link: "",
+    image: "https://lmdiario.com.ar/download/multimedia.normal.bc56cac96d0df74b.41677561206465204f726f20c2a92056616e696e6120426f636f30303030315f6e6f726d616c2e4a5047.JPG",
+    tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Avance del proyecto de ampliación de red en Cosquín",
+    description:
+      "Actualización sobre la construcción de una nueva red de distribución de agua en Cosquín, beneficiando a más de 5,000 hogares con un suministro más confiable y eficiente.",
+    link: "",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/db/Cosqu%C3%ADn_desde_Salta_y_San_Mart%C3%ADn.jpg",
+    tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Informe de calidad del agua en Saldán",
+    description:
+      " Publicación del último informe trimestral que muestra mejoras significativas en la calidad del agua en Saldán, cumpliendo con todos los estándares de salud pública.",
+    link: "",
+    image: "https://www.cadena3.com/admin/playerswf/fotos/ARCHI_1054361.jpg",
     tags: [TAGS.TAILWIND, TAGS.HTML, TAGS.CSS],
   },
 ];
@@ -44,24 +76,23 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <a href={link}>   
-            <img
-              alt="Foto de un proyecto de ejemplo"
-              class="object-cover transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
+              <img
+                alt="Foto de un proyecto de ejemplo"
+                class="object-cover transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
             </a>
           </div>
         </div>
-
+  
         <div class="w-full md:w-1/2 md:max-w-lg">
           <a href={link}>          
-          <h3 class="text-2xl font-bold text-[#3271b4] dark:text-gray-100">
-            {title}
-          </h3>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              {title}
+            </h3>
           </a>
           <div class="flex flex-wrap mt-2">
-
             <div class="mt-2 text-gray-500 dark:text-gray-400">
               {description}
             </div>
@@ -70,4 +101,5 @@ const PROJECTS = [
       </article>
     ))
   }
+  
 </div>

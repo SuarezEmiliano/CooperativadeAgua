@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Code from "../assets/Code.astro";
+import Tramites from "../components/tramites.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/About.astro";
 import PagesCards from "../components/PagesCards.astro";
-import Bienvenida from "../components/Bienvenida.astro"
+import Bienvenida from "../components/Bienvenida.astro";
 import Contacto from "../components/Contacto.astro";
 ---
 
@@ -14,46 +14,60 @@ import Contacto from "../components/Contacto.astro";
   description="Desarrolladores web con más de 4 años de experiencia. Especializado en crear aplicaciones útiles para las personas."
 >
   <main>
-  <Bienvenida/>
-  <div class="p-5" id="tipospaginas">
-    <SectionContainer>
-      <h2 
-      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
-      Tipos de tarifas
-    </h2>
-    <PagesCards />
-  </SectionContainer>
-</div>
+    <Bienvenida />
+    <div class="p-5" id="tipostarifas">
+      <SectionContainer>
+        <h2
+          class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor"
+        >
+          Tipos de tarifas
+        </h2>
+        <PagesCards />
+      </SectionContainer>
+    </div>
+    <div class="p-5" id="tipostramites">
+      <SectionContainer>
+        <h2
+          class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor"
+        >
+          Tipos de trámites
+        </h2>
+        <Tramites/>
+      </SectionContainer>
+    </div>
 
     <div class="p-5" id="proyectos">
-    <SectionContainer>
-      <h2
-      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor">
-      Noticias
-    </h2>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer>
+        <h2
+          class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor"
+        >
+          Noticias
+        </h2>
+        <Projects />
+      </SectionContainer>
     </div>
 
     <div class="p-5" id="sobre-nosotros">
-    <SectionContainer>
-      <h2 
-      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
-      Sobre nosotros
-    </h2>
-      <About />
-    </SectionContainer>
+      <SectionContainer>
+        <h2
+          class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor"
+        >
+          Sobre nosotros
+        </h2>
+        <About />
+      </SectionContainer>
     </div>
 
     <div class="p-5" id="contacto">
-    <SectionContainer>
-      <h2 
-      class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor  dark:text-gray-900 dark:bg-customHoverColor">
-      Contacto
-    </h2>
-      <Contacto />
-    </SectionContainer>
-  </div>
+      <SectionContainer>
+        <h2
+          class="bg-gray-900 flex items-center justify-center my-10 text-3xl font-semibold gap-x-3 text-center text-customHoverColor dark:text-gray-900 dark:bg-customHoverColor"
+        >
+          Contacto
+        </h2>
+        <Contacto />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
 
